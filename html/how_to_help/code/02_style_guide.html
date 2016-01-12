@@ -72,7 +72,63 @@
 
     <section class="content">
 
-      
+      <h1 id="coffeescript-style-guide">Coffeescript style guide</h1>
+<h2 id="some-basic-rules">Some basic rules</h2>
+<ol>
+<li>don&#39;t commit any generated javascript - only commit the coffeescript</li>
+<li>follow <a href="https://github.com/polarmobile/coffeescript-style-guide#guide">this community style guide</a></li>
+</ol>
+<h2 id="readability">Readability</h2>
+<p>We also have some additional rules that help keep the codebase clean and readable to people who might be coming from other languages.</p>
+<h3 id="when-calling-a-function-method-with-more-than-one-argument-wrap-the-arguments-in-parenthesis">When calling a function/method with more than one argument, wrap the arguments in parenthesis</h3>
+<pre><code class="lang-coffeescript">some_function arg # good
+some_function arg1, arg2 # bad
+some_function(arg1, arg2) # good
+</code></pre>
+<h3 id="when-nesting-function-calls-use-parenthesis-to-explicitly-show-the-order-of-operation">When nesting function calls use parenthesis to explicitly show the order of operation</h3>
+<pre><code class="lang-coffeescript">some_function other_function arg1, arg2 # bad bad bad
+some_function(other_function(arg1, arg2)) # better
+</code></pre>
+<h3 id="but-ideally-don-t-nest-function-calls">But ideally, don&#39;t nest function calls</h3>
+<p>It only saves lines of code, which are free. It also makes debugging harder.</p>
+<p>There is sometimes a memory/efficiency cost to creating lots of variables, but this is not a resource intensive program and there&#39;s currently no need to optimise.</p>
+<p>Prefer a single expression per line:</p>
+<pre><code class="lang-coffeescript"># best
+result = other_function(arg1, arg2)
+some_function(result)
+</code></pre>
+<h3 id="make-code-blocks-easy-to-see-by-not-nesting-too-deeply">Make code blocks easy to see by not nesting too deeply</h3>
+<p>There are two parts to this:</p>
+<ol>
+<li>If you are about to nest something more than one level within a function/method, break it out into a new function/method.</li>
+<li>Bring the indentation back to the starting level at the end of each block, even if it means redundantly naming a return value.</li>
+</ol>
+<pre><code class="lang-coffeescript"># bad
+plan_day = (day) -&gt;
+  switch day
+    when &quot;Mon&quot; then go work
+    when &quot;Tue&quot; then go relax
+    when &quot;Thu&quot; then go iceFishing
+    when &quot;Fri&quot;, &quot;Sat&quot;
+      if day is bingoDay
+        go bingo
+        go dancing
+
+# good (two functions, each pulls back to starting indentation)
+plan_day = (day) -&gt;
+  switch day
+    when &quot;Mon&quot; then go work
+    when &quot;Tue&quot; then go relax
+    when &quot;Thu&quot; then go iceFishing
+    when &quot;Fri&quot;, &quot;Sat&quot; then bingo_or_dancing day
+  null
+
+bingo_or_dancing = (day) -&gt;
+  if day is bingoDay
+    go bingo
+  else go dancing
+</code></pre>
+
         <a class="lastp navlink" href="01_setting_up.html">Previous: 01_setting_up</a>
     </section>
 
