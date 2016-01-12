@@ -1,0 +1,34 @@
+{
+  "name": "slidewinder_docs",
+  "version": "1.0.0",
+  "description": "Community documentation for the slidewinder project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slidewinder/docs.git"
+  },
+  "author": "Richard Smith-Unna",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/slidewinder/docs/issues"
+  },
+  "homepage": "https://slidewinder.io/docs",
+  "gh-pages-deploy": {
+    "prep": [
+      "render"
+    ],
+    "noprompt": "true"
+  },
+  "dependencies": {
+    "gh-pages-deploy": "^0.1.1",
+    "submarine": "0.2.4"
+  },
+  "main": "index.js",
+  "scripts": {
+    "render": "submarine markdown html --template=template.html",
+    "deploy": "gh-pages-deploy"
+  }
+}
