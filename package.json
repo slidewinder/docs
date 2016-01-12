@@ -17,6 +17,7 @@
   },
   "homepage": "https://slidewinder.io/docs",
   "gh-pages-deploy": {
+    "staticpath": "html",
     "prep": [
       "render"
     ],
