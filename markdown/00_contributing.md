@@ -16,10 +16,10 @@ The internet is often an unfriendly place. Some people are systematically exclud
 
 It's not always obvious to people who create an unwelcoming atmosphere that they are doing so. So we've got some specific rules that YOU MUST READ BEFORE CONTRIBUTING.
 
-[Go and read the rules](docs/CODE_OF_CONDUCT.md).
+[Go and read the rules](01_code_of_conduct.html).
 
 ### How to help with slidewinder
 
 slidewinder is a code project, but it's also a design project, a community building project, a user experience optimisation project, and much more. Chances are you've got skills that could help us.
 
-Read our [guide to find out how you can help](docs/HOW_TO_HELP.md), and why you should join the community.
+Read our [guide to find out how you can help](02_how_to_help.html), and why you should join the community.
