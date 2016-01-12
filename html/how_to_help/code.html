@@ -19,10 +19,10 @@
     <section class="content">
         <img src="/docs/static/img/community_logo.png" style="max-width: 80%; display: block; margin: 0 auto;">
 
-        <p><a href="index.html">Table of contents</a></p>
-        <h2 id="how-to-help-with-the-slidewinder-code-base">How to help with the slidewinder code base</h2>
-<h3 id="overview">Overview</h3>
-<h4 id="slidewinder-is-a-node-js-project-written-in-coffeescript">slidewinder is a Node.js project written in coffeescript</h4>
+        <p><a href="/docs/index.html">Table of contents</a></p>
+        <h1 id="how-to-help-with-the-slidewinder-code-base">How to help with the slidewinder code base</h1>
+<h2 id="overview">Overview</h2>
+<h3 id="slidewinder-is-a-node-js-project-written-in-coffeescript">slidewinder is a Node.js project written in coffeescript</h3>
 <p>The slidewinder command-line tool and library make up a <strong>Node.js</strong> package written in <strong>coffeescript</strong>.</p>
 <p><strong>Node.js</strong> is a way of running javascript (JS) outside the browser. It has a huge online community, lots of great learning resources, and it lets you use the same web technology on- and off-line.</p>
 <p>New to Node? Here are some places you can learn about it:</p>
@@ -36,15 +36,46 @@
 <li><a href="http://coffeescript.org/">the official coffeescript site</a></li>
 <li><a href="https://learnxinyminutes.com/docs/coffeescript/">learn X in Y minutes where X is coffeescript</a></li>
 </ul>
+<h3 id="setting-up-for-development">setting up for development</h3>
+<h4 id="developer-tools">developer tools</h4>
+<p>If you&#39;re on OSX, you&#39;ll need to install either XCode (free from the App Store) or <a href="http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/">the command-line developer tools</a>.</p>
+<h4 id="installing-node-js">installing Node.js</h4>
+<p>Whatever operating system you use, you&#39;ll need to install Node.js. We recommend doing this using <strong>nvm</strong> - the <strong>n</strong>ode <strong>v</strong>ersion <strong>m</strong>anager. Your machine should come with at least one of <code>curl</code> or <code>wget</code>. You can use either to install <code>nvm</code>:</p>
+<p><code>curl</code> version:</p>
+<pre><code class="lang-bash">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash
+</code></pre>
+<p><code>wget</code> version:</p>
+<pre><code class="lang-bash">wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash
+</code></pre>
+<p>Follow the instructions that appear in the terminal. Once you&#39;ve closed and re-opened your terminal, you&#39;ll need to install the latest version of Node, and set it as default:</p>
+<pre><code class="lang-bash">nvm install node
+nvm use node
+nvm alias default node
+</code></pre>
+<h4 id="getting-the-slidewinder-code">getting the <code>slidewinder</code> code</h4>
+<p>If you&#39;re going to contribute code you should first <em>fork</em> the <code>slidewinder</code> repository, then clone your fork.</p>
+<p>Use the <code>fork</code> button at the top-right of the repository to create your own fork.</p>
+<p><img src="/docs/static/img/fork_button" alt="fork button highlighted"></p>
+<pre><code class="lang-bash">git clone https://github.com/myname/slidewinder.git # replace &#39;myname&#39; with your username
+cd slidewinder
+</code></pre>
+<h4 id="installing-the-dependencies">installing the dependencies</h4>
+<p>The project is set up to handle all it&#39;s own dependencies from this point. You just need to tell it to install them, by running this command in the slidewinder directory:</p>
+<pre><code class="lang-bash">npm install
+</code></pre>
+<h3 id="running-the-tests">running the tests</h3>
+<p>The project has a test script already set up. You run it with:</p>
+<pre><code class="lang-bash">npm run test
+</code></pre>
 
         <div class="navlinks">
           <a class="nextp button" href="community.html">OK, next! &raquo;</a>
         </div>
     </section>
-    <section class="footer">
-      <p>Have we missed something? Please let us know! You can tell us in <a href="https://gitter.im/slidewinder/slidewinder">the live gitter chat</a>, or <a href="https://github.com/slidewinder/docs/issues">open an issue</a>.</p>
-    </section>
   </div>
+  <section class="footer">
+    <p>Have we missed something? Please let us know! You can tell us in <a href="https://gitter.im/slidewinder/slidewinder">the live gitter chat</a>, or <a href="https://github.com/slidewinder/docs/issues">open an issue</a>.</p>
+  </section>
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
 </body>
