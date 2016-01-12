@@ -29,7 +29,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "render": "submarine markdown html --template=template.html && submarine markdown/how_to_help html/how_to_help --template=template.html && submarine markdown/how_to_help/code html/how_to_help/code --temaplte-template.html",
+    "render": "submarine markdown html --template=template.html && submarine markdown/how_to_help html/how_to_help --template=template.html && submarine markdown/how_to_help/code html/how_to_help/code --template-template.html",
     "deploy": "gh-pages-deploy"
   }
 }
