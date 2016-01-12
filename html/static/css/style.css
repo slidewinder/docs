@@ -10,6 +10,7 @@ body {
   padding: 0;
   background-color: #f4f5f6;
   font-size: 18px;
+  padding-bottom:40px;
 }
 h1,
 h2,
@@ -125,23 +126,13 @@ html, body {
 .CodeMirror div.CodeMirror-selected { background: rgba(0,0,0,0.1); }
 .CodeMirror-focused div.CodeMirror-selected { background: rgba(0,0,255,0.1); }
 .CodeMirror .errorLine { background: rgba(255,0,0,0.25); }
-.container { }
+.container {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 
 .nextp {
   float: right;
-}
-
-.datLogo {
-  padding: 3px 5px 0 5px;
-  height: 28px;
-  display: block;
-  float: left;
-}
-
-.datTitle {
-  line-height: 34px;
-  display: block;
-  float: left;
 }
 
 .hidden {
@@ -222,8 +213,11 @@ html, body {
 
 /** footer **/
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  bottom: -40px;
+  bottom: 0;
   height: 40px;
   font-size: 12px;
   line-height: 40px;
