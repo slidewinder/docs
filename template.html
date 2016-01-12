@@ -9,37 +9,38 @@
 </head>
 <body>
   <div class="container">
-    {{#if index}}
-      <section class="content">
-      <h1>Welcome!</h1>
-      <p>This is the slidewinder community documentation.</p>
-      <p>Please post feedback at <a href="https://github.com/slidewinder/docs/issues">the issue tracker</a></p>
-      <hr>
-      <h3>Table of Contents</h3>
-    	<div class="toc">
-        <ul class="toc-list">
-            <li><a href="contributing.html">The introduction to contributing.</a> If you're new, start here!</li>
-            <li><a href="code_of_conduct.html">The community code of conduct.</a> You <strong>MUST READ THIS</strong>.</li>
-            <li><a href="how_to_help.html">The contributing guide.</a> </li>
-        </ul>
-      </div>
-    </section>
-    {{/if}}
-
-    {{#if content}}
     <section class="content">
-      <p><a href="index.html">Table of contents</a></p>
-      {{{ content }}}
-      <div class="navlinks">
-      {{#if next}}
-        <a class="nextp button" href="{{ next }}.html">OK, next! &raquo;</a>
-        {{#if previous}}
-          <a class="lastp navlink" href="{{ previous }}.html">&laquo; back</a>
-        {{/if}}
+      {{#if index}}
+        <h1>Welcome!</h1>
+        <p>This is the slidewinder community documentation.</p>
+        <p>Please post feedback at <a href="https://github.com/slidewinder/docs/issues">the issue tracker</a></p>
+        <hr>
+        <h3>Table of Contents</h3>
+      	<div class="toc">
+          <ul class="toc-list">
+              <li><a href="00_contributing.html">The introduction to contributing.</a> If you're new, start here!</li>
+              <li><a href="01_code_of_conduct.html">The community code of conduct.</a> You <strong>MUST READ THIS</strong>.</li>
+              <li>The <a href="02_how_to_help.html">how to help</a> guide.</li>
+          </ul>
+        </div>
+        <hr>
+        <p>Thanks for reading!</p>
+        <p>~ the slidewinder team</p>
       {{/if}}
-      </div>
+
+      {{#if content}}
+        <p><a href="index.html">Table of contents</a></p>
+        {{{ content }}}
+        <div class="navlinks">
+        {{#if next}}
+          <a class="nextp button" href="{{ next }}.html">OK, next! &raquo;</a>
+          {{#if previous}}
+            <a class="lastp navlink" href="{{ previous }}.html">&laquo; back</a>
+          {{/if}}
+        {{/if}}
+        </div>
+      {{/if}}
     </section>
-    {{/if}}
   </div>
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
