@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+  <title>Submarine</title>
+  <style>
+    body {
+      font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+      font-weight: 300;
+      color: #333;
+      line-height: 1.65em;
+      font-size: 15px;
+    }
+
+    .site-header {
+      margin: 20px 0;
+      padding: 15px 0;
+      text-align: center;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    .site-header-text {
+      font-size: 50px;
+      letter-spacing: 2px;
+      color: #333;
+      line-height: 1em;
+      font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+    }
+
+    .site-footer {
+      font-size: 12px;
+      color: #999;
+      margin-top: 20px;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    .wrapper {
+      width: 100%;
+      margin: auto;
+      max-width: 640px;
+    }
+
+    .navlink {
+      display: inline-block;
+      width: 49%;
+    }
+
+    .nextp { text-align: right; }
+
+    code, pre {
+      background: #f5f5f5;
+      border-radius: 2px;
+      font-size: 14px;
+      padding: 3px;
+    }
+
+    pre code { padding: 0;}
+
+    a {
+      color: #08c;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="site-header">
+      <a class="site-header-text" href="./index.html">Submarine</a>
+    </header>
+
+    <section class="content">
+
+      <h1 id="setting-up-for-slidewinder-development">Setting up for <code>slidewinder</code> development</h1>
+<h2 id="developer-tools">developer tools</h2>
+<p>If you&#39;re on OSX, you&#39;ll need to install either XCode (free from the App Store) or <a href="http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/">the command-line developer tools</a>.</p>
+<h2 id="installing-node-js">installing Node.js</h2>
+<p>Whatever operating system you use, you&#39;ll need to install Node.js. We recommend doing this using <strong>nvm</strong> - the <strong>n</strong>ode <strong>v</strong>ersion <strong>m</strong>anager. Your machine should come with at least one of <code>curl</code> or <code>wget</code>. You can use either to install <code>nvm</code>:</p>
+<p><code>curl</code> version:</p>
+<pre><code class="lang-bash">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash
+</code></pre>
+<p><code>wget</code> version:</p>
+<pre><code class="lang-bash">wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash
+</code></pre>
+<p>Follow the instructions that appear in the terminal. Once you&#39;ve closed and re-opened your terminal, you&#39;ll need to install the latest version of Node, and set it as default:</p>
+<pre><code class="lang-bash">nvm install node
+nvm use node
+nvm alias default node
+</code></pre>
+<h2 id="getting-the-slidewinder-code">getting the <code>slidewinder</code> code</h2>
+<p>If you&#39;re going to contribute code you should first <em>fork</em> the <code>slidewinder</code> repository, then clone your fork.</p>
+<p>Use the <code>fork</code> button at the top-right of the repository to create your own fork.</p>
+<p><img src="/docs/static/img/fork_button" alt="fork button highlighted"></p>
+<pre><code class="lang-bash">git clone https://github.com/myname/slidewinder.git # replace &#39;myname&#39; with your username
+cd slidewinder
+</code></pre>
+<h2 id="installing-the-dependencies">installing the dependencies</h2>
+<p>The project is set up to handle all it&#39;s own dependencies from this point. You just need to tell it to install them, by running this command in the slidewinder directory:</p>
+<pre><code class="lang-bash">npm install
+</code></pre>
+<h2 id="running-the-tests">running the tests</h2>
+<p>The project has a test script already set up. You run it with:</p>
+<pre><code class="lang-bash">npm run test
+</code></pre>
+<h2 id="now-you-re-ready-">now you&#39;re ready!</h2>
+<p>Contratulations! Now you&#39;re ready to start developing.</p>
+
+        <a class="lastp navlink" href="00_node_and_coffeescript.html">Previous: 00_node_and_coffeescript</a>
+        <a class="nextp navlink" href="02_style_guide.html">Next: 02_style_guide</a>
+    </section>
+
+    <footer class="site-footer">
+    </footer>
+  </div>
+</body>
+</html>

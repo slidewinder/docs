@@ -1,80 +1,30 @@
 # How to help with the slidewinder code base
 
-## Overview
+## Basics
 
-### slidewinder is a Node.js project written in coffeescript
+If you're not familiar with Node.js/coffeescript, or you want a refresher on how to set up a project like this, we have some simple guides:
 
-The slidewinder command-line tool and library make up a **Node.js** package written in **coffeescript**.
+1. [Node.js and coffeescript](code/00_node_and_coffeescript.html)
+2. [Setting up for slidewinder development](code/01_setting_up.html)
 
-**Node.js** is a way of running javascript (JS) outside the browser. It has a huge online community, lots of great learning resources, and it lets you use the same web technology on- and off-line.
+## Code style
 
-New to Node? Here are some places you can learn about it:
+We enforce a [coffeescript style guide](code/02_style_guide.html) - make sure you read it!.
 
-- [the official Node site](https://nodejs.org/en/)
-- [Max Ogden's Art of Node - a collection of ways to learn Node.js](https://github.com/maxogden/art-of-node#the-art-of-node)
+The main `slidewinder` repo has an [`.editorconfig`](https://github.com/slidewinder/slidewinder/blob/master/.editorconfig) file. This allows your editor to automatically adopt many of our style conventions when you're working on files in that repo. This is especially useful if you often switch between projects.
 
-**coffeescript** is a language that compiles to javascript (JS). There are lots of nice features in coffeescript that save time and energy compared to JS.
+See how to set up `.editorconfig` with your text editor at the [editorconfig site](http://editorconfig.org/).
 
-Never seen coffeescript before? Here are two great places to learn the basics:
+## What kinds of help do we want?
 
-- [the official coffeescript site](http://coffeescript.org/)
-- [learn X in Y minutes where X is coffeescript](https://learnxinyminutes.com/docs/coffeescript/)
+We have a roadmap for the project, which is manage using Github Issues and milestones.
 
-### setting up for development
+If you [look at the milestones]() for a repo, you can browse the issues by milestone.
 
-#### developer tools
+Any issue that has a `help wanted` label is up for grabs! Check out the [list of all those issues](https://github.com/search?utf8=%E2%9C%93&q=user%3Aslidewinder+label%3A%22help+wanted%22&type=Issues&ref=searchresults).
 
-If you're on OSX, you'll need to install either XCode (free from the App Store) or [the command-line developer tools](http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/).
+In addition, any issue with the `good first issue` label is one the developers think would make a good starting point for a new contributor. You can [list those too](https://github.com/search?utf8=%E2%9C%93&q=user%3Aslidewinder+label%3A%22good+first+issue%22&type=Issues&ref=searchresults).
 
-#### installing Node.js
+## Not sure how to get started?
 
-Whatever operating system you use, you'll need to install Node.js. We recommend doing this using **nvm** - the **n**ode **v**ersion **m**anager. Your machine should come with at least one of `curl` or `wget`. You can use either to install `nvm`:
-
-`curl` version:
-
-```bash
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash
-```
-
-`wget` version:
-
-```bash
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash
-```
-
-Follow the instructions that appear in the terminal. Once you've closed and re-opened your terminal, you'll need to install the latest version of Node, and set it as default:
-
-```bash
-nvm install node
-nvm use node
-nvm alias default node
-```
-
-#### getting the `slidewinder` code
-
-If you're going to contribute code you should first *fork* the `slidewinder` repository, then clone your fork.
-
-Use the `fork` button at the top-right of the repository to create your own fork.
-
-![fork button highlighted](/docs/static/img/fork_button)
-
-```bash
-git clone https://github.com/myname/slidewinder.git # replace 'myname' with your username
-cd slidewinder
-```
-
-#### installing the dependencies
-
-The project is set up to handle all it's own dependencies from this point. You just need to tell it to install them, by running this command in the slidewinder directory:
-
-```bash
-npm install
-```
-
-### running the tests
-
-The project has a test script already set up. You run it with:
-
-```bash
-npm run test
-```
+We've got a [live chat room](https://gitter.im/slidewinder/slidewinder) where you can come and ask us questions - we'd love to see you there, and the team will be happy to help you find your first issue.
