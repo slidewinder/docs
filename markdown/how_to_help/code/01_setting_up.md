@@ -20,12 +20,22 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | b
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash
 ```
 
-Follow the instructions that appear in the terminal. Once you've closed and re-opened your terminal, you'll need to install the latest version of Node, and set it as default:
+Follow the instructions that appear in the terminal - it will ask you to close once it's done.
+
+After you've closed and re-opened your terminal, you'll need to tell `nvm` to install the latest version of Node, and set it as default:
 
 ```bash
 nvm install node
 nvm use node
 nvm alias default node
+```
+
+## installing Coffeescript
+
+Just run:
+
+```
+npm install --global coffee-script
 ```
 
 ## getting the `slidewinder` code
@@ -51,11 +61,15 @@ npm install
 
 ## running the tests
 
-The project has a test script already set up. You run it with:
+The project has a test script already set up with `cake`, the coffeescript build manager.
+
+You run it with:
 
 ```bash
-npm run test
+cake test
 ```
+
+You should see some colourful output (all green if all tests are passing).
 
 ## now you're ready!
 
