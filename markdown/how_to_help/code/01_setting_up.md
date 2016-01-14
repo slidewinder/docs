@@ -46,8 +46,10 @@ Use the `fork` button at the top-right of the repository to create your own fork
 
 <img src="/docs/static/img/fork_button.png" style="width: 100%" />
 
+Now clone your fork (replace 'myname' with your username):
+
 ```bash
-git clone https://github.com/myname/slidewinder.git # replace 'myname' with your username
+git clone https://github.com/myname/slidewinder.git
 cd slidewinder
 ```
 
