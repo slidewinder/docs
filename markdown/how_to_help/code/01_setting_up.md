@@ -44,7 +44,7 @@ If you're going to contribute code you should first *fork* the `slidewinder` rep
 
 Use the `fork` button at the top-right of the repository to create your own fork.
 
-![fork button highlighted](/docs/static/img/fork_button)
+<img src="/docs/static/img/fork_button.png" style="width: 100%">fork button highlighted</img>
 
 ```bash
 git clone https://github.com/myname/slidewinder.git # replace 'myname' with your username
