@@ -25,9 +25,9 @@ Follow the instructions that appear in the terminal - it will ask you to close o
 After you've closed and re-opened your terminal, you'll need to tell `nvm` to install the latest version of Node, and set it as default:
 
 ```bash
-nvm install node
-nvm use node
-nvm alias default node
+nvm install 5.11
+nvm use 5.11
+nvm alias default 5.11
 ```
 
 ## installing Coffeescript
